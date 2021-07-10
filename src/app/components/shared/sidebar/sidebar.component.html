@@ -3,7 +3,7 @@
   <h3 class="text-light">Gif's App</h3>
   <hr class="text-light">
   <div class="list-group list-reset">
-    <a  *ngFor="let item of Historial" href="#" class="list-group-item list-group-item-action">
+    <a  *ngFor="let item of Historial" href="#" class="list-group-item list-group-item-action" (click)="buscar(item)">
       {{item}}
     </a>
   </div>

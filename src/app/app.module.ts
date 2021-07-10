@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { GifsModule } from './components/gifs/gifs.module';
-// import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
+
 import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
@@ -11,9 +12,13 @@ import { SharedModule } from './components/shared/shared.module';
     AppComponent
   ],
   imports: [
+    //ORDEN DE LOS MODULOS:
+    //1.- MODULOS GENERADOS POR ANGULAR
     BrowserModule,
+    HttpClientModule,
+    //2.- MODULOS GENERADOS POR UNO MISMO
     SharedModule,
-    GifsModule
+    GifsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
